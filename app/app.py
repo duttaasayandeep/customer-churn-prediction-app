@@ -1,26 +1,14 @@
-import sys
-import os
-import pickle  # or joblib if you're using that
-import sklearn._loss  # Import the module
-
-# Create an alias so that '_loss' is recognized during unpickling
-sys.modules['_loss'] = sklearn._loss
-
 from flask import Flask, render_template, request
-from joblib import load  # Assuming you're using joblib to load
+import pickle
+import numpy as np
 
 app = Flask(__name__)
 
-# Build the absolute path to the model file
-base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-model_path = os.path.join(base_dir, 'model', 'best_model.pkl')
-
-# Load the model using joblib (or pickle)
-data = load(model_path)
-model = data['model']
-scaler = data['scaler']
-
-
+# Load the model and scaler
+with open('../model/best_model.pkl', 'rb') as f:
+    data = pickle.load(f)
+    model = data['model']
+    scaler = data['scaler']
 
 # Home route
 @app.route('/', methods=['GET', 'POST'])
