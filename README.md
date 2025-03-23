@@ -22,6 +22,9 @@ BankingChurnPrediction/ ├── app/ │ ├── static/ │ │ └── c
      
    - Open your browser and go to `http://127.0.0.1:5000` to access the application.
 
+## Hosted on Render.com
+  - URL: ``
+
 ## About
 
 This application uses machine learning for churn prediction to help banks identify customers who may leave, enabling targeted retention strategies.
