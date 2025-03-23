@@ -2,6 +2,17 @@
 
 This project builds a machine learning model to predict customer churn in the banking sector and provides a web application for bankers to input customer data and receive predictions.
 
+## Screenshots
+
+### 1. Sample Front Page
+![Sample Front Page](screenshots/sample_front_page.png)
+
+### 2. Sample Inputs Before Prediction
+![Sample Inputs Before Prediction](screenshots/sample_inputs.png)
+
+### 3. After Prediction
+![After Prediction](screenshots/after_prediction.png)
+
 ## Project Structure
 
 BankingChurnPrediction/ ├── app/ │ ├── static/ │ │ └── css/ │ │ └── style.css │ ├── templates/ │ │ └── index.html │ └── app.py ├── model/ │ └── best_model.pkl ├── notebooks/ │ └── ChurnPredictionModel.ipynb ├── requirements.txt └── README.md
@@ -22,8 +33,7 @@ BankingChurnPrediction/ ├── app/ │ ├── static/ │ │ └── c
      
    - Open your browser and go to `http://127.0.0.1:5000` to access the application.
 
-## Hosted on Render.com
-  - URL: ``
+
 
 ## About
 
