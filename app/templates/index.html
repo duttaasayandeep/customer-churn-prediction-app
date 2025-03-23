@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banking Customer Churn Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Banking Customer Churn Prediction</h1>
+    </header>
+
+    <section class="introduction">
+        <h2>What is Churn Prediction?</h2>
+        <p>
+            Churn prediction is a data-driven process used to identify customers who are likely to leave a company.
+            In the banking sector, understanding and anticipating churn can help banks retain valuable customers,
+            improve customer service, and increase profitability.
+        </p>
+        <p>
+            This prediction app leverages machine learning to analyze customer behavior and financial data,
+            thereby empowering bankers to make informed decisions and develop effective customer retention strategies.
+        </p>
+    </section>
+
+    <section class="prediction-form">
+        <h2>Enter Customer Details</h2>
+        <form method="POST">
+            <label for="CreditScore">Credit Score:</label>
+            <input type="number" step="any" name="CreditScore" required>
+
+            <label for="Age">Age:</label>
+            <input type="number" step="any" name="Age" required>
+
+            <label for="Tenure">Tenure (years):</label>
+            <input type="number" step="any" name="Tenure" required>
+
+            <label for="Balance">Balance:</label>
+            <input type="number" step="any" name="Balance" required>
+
+            <label for="NumOfProducts">Number of Products:</label>
+            <input type="number" step="any" name="NumOfProducts" required>
+
+            <label for="HasCrCard">Has Credit Card (1 for Yes, 0 for No):</label>
+            <input type="number" step="any" name="HasCrCard" min="0" max="1" required>
+
+            <label for="IsActiveMember">Is Active Member (1 for Yes, 0 for No):</label>
+            <input type="number" step="any" name="IsActiveMember" min="0" max="1" required>
+
+            <label for="EstimatedSalary">Estimated Salary:</label>
+            <input type="number" step="any" name="EstimatedSalary" required>
+
+            <label for="Geography">Geography (France / Spain / Germany):</label>
+            <input type="text" name="Geography" required>
+
+            <label for="Gender">Gender (Male / Female):</label>
+            <input type="text" name="Gender" required>
+
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction %}
+            <h3>Prediction: {{ prediction }}</h3>
+        {% endif %}
+    </section>
+
+    <footer>
+        <p>Built by Sayandeep Dutta</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 20px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideDown 1s ease-out;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #0056b3;
+}
+
+/* Section Styles */
+.introduction, .prediction-form {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.introduction h2, .prediction-form h2 {
+    font-size: 2em;
+    color: #333;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+}
+
+.introduction p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+/* Form Styles */
+.prediction-form form {
+    margin-top: 20px;
+}
+
+.prediction-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.prediction-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prediction-form input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.3);
+    outline: none;
+}
+
+.prediction-form button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.prediction-form button:hover {
+    background-color: #003d80;
+    transform: scale(1.05);
+}
+
+/* Prediction Result Styles */
+.prediction-form h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #555;
+    border-top: 2px solid #0056b3;
+}
+
+/* Animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .introduction h2, .prediction-form h2 {
+        font-size: 1.5em;
+    }
+    .introduction p, .prediction-form label, .prediction-form input, .prediction-form button {
+        font-size: 1em;
+    }
+}
