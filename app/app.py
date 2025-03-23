@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-import pickle
 import numpy as np
 
 app = Flask(__name__)
@@ -15,10 +14,11 @@ import os
 base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 model_path = os.path.join(base_dir, 'model', 'best_model.pkl')
 
-with open(model_path, 'rb') as f:
-    data = pickle.load(f)
-    model = data['model']
-    scaler = data['scaler']
+from joblib import load
+data = load(model_path)
+model = data['model']
+scaler = data['scaler']
+
 
 
 # Home route
